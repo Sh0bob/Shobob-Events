@@ -20,5 +20,5 @@ module.exports = {
   sideButton2: pngToBase64("assets/sebutton.png"),
   sideButton3: pngToBase64("assets/ad.png"),
 
-  partners: pngToBase64("assets/partners.png"),
+  partners: pngToBase64("assets/partners2.png"),
 };
