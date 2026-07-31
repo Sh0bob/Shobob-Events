@@ -115,33 +115,20 @@ button.ttwc-panel-btn {
   position: absolute !important;
   z-index: 1 !important;
   pointer-events: none !important;
-  border-radius: 22px !important;
-  border: 1px solid rgba(225, 235, 243, 0.42) !important;
-  background:
-    radial-gradient(130% 95% at 10% 0%, rgba(255,255,255,0.12), transparent 42%),
-    linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.04) 26%, rgba(255,255,255,0.015) 27%, rgba(0,0,0,0.07) 100%),
-    linear-gradient(180deg, rgba(70,88,100,0.42), rgba(25,39,49,0.56)) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.18),
-    inset 0 -1px 0 rgba(0,0,0,0.20),
-    0 10px 30px rgba(0,0,0,0.22),
-    0 0 20px rgba(255,255,255,0.04) !important;
-  backdrop-filter: blur(8px) saturate(120%);
-  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  border: none !important;
+  border-radius: 0 !important;
+  background-image: url("./assets/mainpanel.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25) !important; /* keep a soft drop shadow so it lifts off the bg video */
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   color: transparent !important;
   text-shadow: none !important;
-  overflow: hidden;
 }
 
-button.ttwc-panel-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.00) 34%, rgba(0,0,0,0.08));
-}
+/* delete the ::before rule entirely — that gradient sheen was designed for the glass look and will muddy the wood/metal art in mainpanel.png */
 
 /* Shared button look */
 button.ttwc-menu-btn {
