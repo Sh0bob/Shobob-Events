@@ -91,9 +91,9 @@ source = replaceOne(
 			top = aQZ.fD + .30 * aQZ.j,
 			inputW = panelW - colorSize - controlGap,
 			buttonTop = top + inputH + controlGap,
-			panelPadX = Math.max(18, .075 * aQZ.i),
-            panelPadTop = Math.max(18, .085 * aQZ.j),
-            panelPadBottom = Math.max(16, .075 * aQZ.j),
+			panelPadX = Math.max(18, .100 * aQZ.i),
+            panelPadTop = Math.max(18, .115 * aQZ.j),
+            panelPadBottom = Math.max(16, .100 * aQZ.j),
 			panelH = (buttonTop + (buttonH + buttonGap) * 2 + buttonH + panelPadBottom) - (top - panelPadTop);
 
 		sd = top;
