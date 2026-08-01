@@ -93,7 +93,7 @@ source = replaceOne(
 			buttonTop = top + inputH + controlGap,
 			panelPadX = Math.max(18, .100 * aQZ.i),
             panelPadTop = Math.max(18, .115 * aQZ.j),
-            panelPadBottom = Math.max(16, .100 * aQZ.j),
+            panelPadBottom = Math.max(16, .115 * aQZ.j),
 			panelH = (buttonTop + (buttonH + buttonGap) * 2 + buttonH + panelPadBottom) - (top - panelPadTop);
 
 		sd = top;
