@@ -12,8 +12,8 @@
   gtag('config', 'G-WYYDMY13BG');
 </script>-->
   <meta charset="utf-8" />
-  <title>Territorial.io Battle Royale World Cup</title>
-  <meta name="description" content="Modified Version of Territorial.io's FX Client - TT World Cup">
+  <title>Shobob Events Territorial.io</title>
+  <meta name="description" content="Modified Version of Territorial.io's FX Client - Shobob Events">
   <meta name="keywords"
     content="territorial.io,territory games,territorial io,map games,conquest games,conquest game,david tschacher,territorial,territory game,io game,io games,territory.io,territory io,territory games io">
   <meta name="author" content="Shobob, MohsenEMX, peshomir,orlemley1, David Tschacher">
@@ -27,12 +27,12 @@
   <meta property="og:image" content="https://sh0bob.github.io/Shobob-Events/assets/botc-logo.png">
   <meta property="og:url" content="https://sh0bob.github.io/Shobob-Events/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ShobobEvents Client">
+  <meta name="twitter:title" content="Shobob Events Client">
   <meta name="twitter:description" content="Modified Version of Territorial.io For World Cup">
-  <meta name="twitter:image" content="https://sh0bob.github.io/ShobobEvents/assets/botc-logo.png">
+  <meta name="twitter:image" content="https://sh0bob.github.io/Shobob-Events/assets/botc-logo.png">
   <meta itemprop="name" content="Shobob Events">
-  <meta itemprop="description" content="Modified Version of Territorial.io For World Cup">
-  <meta itemprop="image" content="https://sh0bob.github.io/TT-World-Cup/assets/botc-logo.png">
+  <meta itemprop="description" content="Modified Version of Territorial.io For events">
+  <meta itemprop="image" content="https://sh0bob.github.io/Shobob-Events/assets/botc-logo.png">
 
   <video id="ttwc-bg-video" autoplay muted loop playsinline preload="auto">
     <source src="assets/tt-background.mp4" type="video/mp4">
@@ -137,12 +137,16 @@ button.ttwc-menu-btn {
   justify-content: flex-start;
   text-align: left !important;
   padding: 0 18px 0 60px !important;
-  border: 30px solid transparent !important;
-  border-image: url("./assets/mainbutton.png") 150 fill round !important;
-  background: transparent !important;
-  color: #f7fbff !important;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.55);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.26) !important;
+  border: none !important;
+  background-image: url("./assets/mainbutton.png") !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: bold !important;
+  /* Engraved stone text effect */
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8), 1px 1px 1px rgba(255,255,255,0.3) !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35) !important;
 }
 
 button.ttwc-menu-btn::before {
@@ -183,35 +187,36 @@ button.ttwc-menu-btn.ttwc-menu::before {
 input.ttwc-name-input {
   position: absolute !important;
   z-index: 6 !important;
-  border: 22px solid transparent !important;
-  border-image: url("./assets/nameplate.png") 110 round !important;
-  color: #ffffff !important;
+  border: none !important;
+  color: rgba(255, 255, 255, 0.85) !important;
   padding: 0 16px 0 52px !important;
-  background-color: rgba(20, 14, 8, 0.55) !important;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='none' stroke='%23e4eef8' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'><circle cx='32' cy='22' r='9'/><path d='M16 50c4-9 12-13 16-13s12 4 16 13'/></g></svg>") !important;
-  background-repeat: no-repeat !important;
-  background-size: 22px 22px !important;
-  background-position: 14px center !important;
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.45) !important;
+  background-color: transparent !important;
+  /* Layering the avatar SVG on top of nameplate.png */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='none' stroke='%23e4eef8' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'><circle cx='32' cy='22' r='9'/><path d='M16 50c4-9 12-13 16-13s12 4 16 13'/></g></svg>"), url("./assets/nameplate.png") !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-size: 22px 22px, 100% 100% !important;
+  background-position: 14px center, center !important;
+  box-shadow: none !important;
   text-align: left !important;
   font-family: Arial, Helvetica, sans-serif !important;
-  font-weight: 400 !important;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.30);
+  font-weight: bold !important;
+  /* Engraved stone text effect */
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8), 1px 1px 1px rgba(255,255,255,0.3) !important;
 }
 
 input.ttwc-name-input::placeholder {
   color: rgba(228, 238, 245, 0.60);
 }
 
-/* Colour swatch — bezel frame only; never touch the button's own background —
-   the game sets the live colour fill via r7.style.backgroundColor in JS */
+/* Colour swatch — bezel frame only; never touch the button's own background */
 button.ttwc-color-btn {
   position: absolute !important;
   z-index: 6 !important;
-  border: 16px solid transparent !important;
-  border-image: url("./assets/colorswatch.png") 90 round !important;
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.35);
+  border: 8px solid transparent !important;
+  border-image: url("./assets/colorswatch.png") 30 stretch !important;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.45);
   overflow: hidden;
+  background-clip: padding-box !important;
 }
 
 button.ttwc-color-btn::after {
@@ -236,13 +241,12 @@ button.ttwc-menu-btn.ttwc-pressed {
 
 /* Main dark menu panels created at runtime */
 div[style*="position: absolute"][style*="background-color: rgba(0, 0, 0, 0.85)"] {
-  background: rgba(6, 12, 18, 0.78) !important;
-  backdrop-filter: blur(10px) saturate(120%);
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
-  border-color: rgba(220, 235, 245, 0.65) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.10),
-    0 10px 30px rgba(0,0,0,0.30) !important;
+  background-image: url("./assets/menubackground.png") !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.40) !important;
 }
 
 /* Any runtime grid used by the menu */
@@ -253,70 +257,66 @@ div[style*="display: grid"][style*="grid-template-columns"] {
 
 /* Game menu tiles */
 div[style*="display: grid"][style*="grid-template-columns"] > button {
-  background:
-    radial-gradient(120% 90% at 10% 0%, rgba(255,255,255,0.10), transparent 40%),
-    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03) 34%, rgba(0,0,0,0.12) 100%),
-    linear-gradient(180deg, rgba(40,55,66,0.68), rgba(12,18,24,0.82)) !important;
-  border: 1px solid rgba(225, 235, 243, 0.35) !important;
-  border-radius: 16px !important;
-  color: #f5fbff !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.12),
-    inset 0 -1px 0 rgba(0,0,0,0.28),
-    0 8px 20px rgba(0,0,0,0.22) !important;
+  background-image: url("./assets/menubutton.png") !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: bold !important;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8), 1px 1px 1px rgba(255,255,255,0.3) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important;
   transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease !important;
 }
 
 /* Hover */
 div[style*="display: grid"][style*="grid-template-columns"] > button:hover {
-  filter: brightness(1.06);
+  filter: brightness(1.1);
   transform: translateY(-1px);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.14),
-    inset 0 -1px 0 rgba(0,0,0,0.28),
-    0 10px 24px rgba(0,0,0,0.28) !important;
 }
 
 /* Pressed */
 div[style*="display: grid"][style*="grid-template-columns"] > button:active {
   transform: translateY(2px) scale(0.99);
-  filter: brightness(0.95);
+  filter: brightness(0.9);
 }
 
 /* Selected/active tile */
 div[style*="display: grid"][style*="grid-template-columns"] > button[style*="rgb(95, 95, 95)"] {
-  background:
-    radial-gradient(120% 90% at 10% 0%, rgba(255,255,255,0.14), transparent 40%),
-    linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04) 34%, rgba(0,0,0,0.10) 100%),
-    linear-gradient(180deg, rgba(70,88,100,0.74), rgba(24,34,42,0.88)) !important;
+  background-image: url("./assets/menubutton.png") !important;
+  filter: brightness(0.7) !important;
 }
 
 /* Header and footer bars */
 div[style*="display: flex"][style*="height: 165px"] {
-  background: rgba(5, 10, 16, 0.82) !important;
-  border-color: rgba(220,235,245,0.35) !important;
+  background-image: url("./assets/menubackground.png") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 /* TTWC game menu header */
 div[style*="position: absolute"][style*="top: 0px"][style*="width: 100%"][style*="height: 165px"] {
-  background: rgba(5, 10, 16, 0.82) !important;
-  backdrop-filter: blur(10px) saturate(120%);
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
-  border-bottom: 1px solid rgba(220, 235, 245, 0.35) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.08),
-    0 8px 24px rgba(0,0,0,0.22) !important;
+  background-image: url("./assets/menubackground.png") !important;
+  background-size: cover !important;
+  background-position: center bottom !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
 }
 
 /* Safer footer selector */
 div[style*="position: absolute"][style*="white-space: nowrap"][style*="border-top: 3.6px solid rgb(255, 255, 255)"] {
-  background: rgba(5, 10, 16, 0.82) !important;
-  backdrop-filter: blur(10px) saturate(120%);
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
-  border-top: 1px solid rgba(220, 235, 245, 0.35) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.06),
-    0 -8px 24px rgba(0,0,0,0.18) !important;
+  background-image: url("./assets/menubackground.png") !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: 0 -8px 24px rgba(0,0,0,0.4) !important;
 }
 
 /* TTWC game menu back button */
@@ -373,18 +373,13 @@ div[style*="white-space: nowrap"] > button:active {
 /* ===== TTWC WINDOW RESKIN: SETTINGS + CUSTOM LOBBY ===== */
 
 .window {
-  background:
-    radial-gradient(120% 120% at 10% 0%, rgba(255,255,255,0.08), transparent 38%),
-    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02) 28%, rgba(0,0,0,0.10) 100%),
-    linear-gradient(180deg, rgba(20,30,38,0.82), rgba(8,14,20,0.90)) !important;
-  border: 1px solid rgba(220, 235, 245, 0.32) !important;
-  border-radius: 20px !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.10),
-    inset 0 -1px 0 rgba(0,0,0,0.24),
-    0 16px 40px rgba(0,0,0,0.34) !important;
-  backdrop-filter: blur(10px) saturate(120%);
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  background-image: url("./assets/menubackground.png") !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5) !important;
   color: #f3f8fc !important;
 }
 
@@ -392,14 +387,14 @@ div[style*="white-space: nowrap"] > button:active {
 .window h2,
 .window h3 {
   color: #ffffff !important;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
   font-weight: 800;
   letter-spacing: 0.3px;
 }
 
 .window hr {
   border: none !important;
-  border-top: 1px solid rgba(220, 235, 245, 0.20) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
   margin: 14px 0 !important;
 }
 
@@ -412,35 +407,46 @@ div[style*="white-space: nowrap"] > button:active {
   color: #edf5fa !important;
 }
 
-/* Shared TTWC controls inside windows */
-.window button,
+/* Shared TTWC controls inside windows (Inputs & Selects Only) */
 .window select,
 .window input[type="text"],
 .window input[type="number"] {
   border-radius: 12px !important;
   border: 1px solid rgba(225, 235, 243, 0.30) !important;
   color: #f5fbff !important;
-  background:
-    radial-gradient(120% 90% at 10% 0%, rgba(255,255,255,0.08), transparent 40%),
-    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02) 34%, rgba(0,0,0,0.10) 100%),
-    linear-gradient(180deg, rgba(40,55,66,0.62), rgba(12,18,24,0.82)) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.10),
-    inset 0 -1px 0 rgba(0,0,0,0.22),
-    0 6px 14px rgba(0,0,0,0.18) !important;
+  background: rgba(12, 18, 24, 0.82) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), inset 0 -1px 0 rgba(0,0,0,0.22), 0 6px 14px rgba(0,0,0,0.18) !important;
   transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease !important;
 }
 
-.window button:hover,
 .window select:hover,
 .window input[type="text"]:hover,
 .window input[type="number"]:hover {
   filter: brightness(1.04);
 }
 
+/* Shared TTWC controls inside windows (Buttons Only) */
+.window button {
+  background-image: url("./assets/mainbutton.png") !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: bold !important;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8), 1px 1px 1px rgba(255,255,255,0.3) !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35) !important;
+  transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+.window button:hover {
+  filter: brightness(1.1);
+}
+
 .window button:active {
   transform: translateY(2px) scale(0.99);
-  filter: brightness(0.95);
+  filter: brightness(0.9);
 }
 
 .window input::placeholder {
@@ -546,32 +552,36 @@ div[style*="white-space: nowrap"] > button:active {
   color: #ffffff !important;
 }
 
-/* ===== TTWC GENERIC ACTION BUTTONS ===== */
-
+/* Combined generic buttons (Back buttons & Action buttons) */
+div[style*="white-space: nowrap"] > button,
+.ttwc-game-menu-back,
 .ttwc-action-btn {
-  background:
-    radial-gradient(120% 90% at 10% 0%, rgba(255,255,255,0.10), transparent 40%),
-    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03) 34%, rgba(0,0,0,0.12) 100%),
-    linear-gradient(180deg, rgba(40,55,66,0.68), rgba(12,18,24,0.82)) !important;
-  border: 1px solid rgba(225, 235, 243, 0.35) !important;
-  border-radius: 16px !important;
-  color: #f5fbff !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.12),
-    inset 0 -1px 0 rgba(0,0,0,0.28),
-    0 8px 20px rgba(0,0,0,0.22) !important;
+  background-image: url("./assets/mainbutton.png") !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: bold !important;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8), 1px 1px 1px rgba(255,255,255,0.3) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35) !important;
   transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease !important;
 }
 
+div[style*="white-space: nowrap"] > button:hover,
+.ttwc-game-menu-back:hover,
 .ttwc-action-btn:hover {
-  filter: brightness(1.06);
+  filter: brightness(1.1);
   transform: translateY(-1px);
 }
 
+div[style*="white-space: nowrap"] > button:active,
+.ttwc-game-menu-back:active,
 .ttwc-action-btn:active,
 .ttwc-action-btn.ttwc-pressed {
   transform: translateY(2px) scale(0.99);
-  filter: brightness(0.95);
+  filter: brightness(0.9);
 }
   </style>
   <script>
