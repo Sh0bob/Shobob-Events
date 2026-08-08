@@ -11,6 +11,8 @@ function pngToBase64(filePath) {
 module.exports = {
   ttwcLogo: pngToBase64("assets/botc-logo.png"),
 
+  banner: pngToBase64("assets/banner.png"),
+
   transparentPixel:
   "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=",
 
