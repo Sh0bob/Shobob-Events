@@ -1120,7 +1120,7 @@ div[style*="white-space: nowrap"] > button:active,
     const inputRect = kingdomInput.getBoundingClientRect();
 
     const lobbyBtn = findNearbyButton(inputRect, "join/create custom lobby");
-    const settingsBtn = findNearbyButton(inputRect, "TTWC client settings");
+    const settingsBtn = findNearbyButton(inputRect, "SE client settings");
     const menuBtn = findNearbyButton(inputRect, "game menu");
     const colorBtn = findNearbyColorButton(inputRect, [lobbyBtn, settingsBtn, menuBtn]);
     const panelBtn = findPanelButton(inputRect, [lobbyBtn, settingsBtn, menuBtn, colorBtn]);
@@ -2960,7 +2960,7 @@ window.addEventListener("error", function(event) {
       const label = getClientLabel(index);
 
       const badgeStyle =
-        label === "TTWC"
+        label === "SE"
           ? "background:rgba(22,101,52,.88);border:1px solid rgba(74,222,128,.88);"
           : "background:rgba(55,65,81,.88);border:1px solid rgba(156,163,175,.70);";
 
@@ -3011,7 +3011,7 @@ window.addEventListener("error", function(event) {
         overflow:hidden;
         text-overflow:ellipsis;
       ">
-        TTWC Client Status
+        SE Client Status
       </div>
       ${rows}
     `;
