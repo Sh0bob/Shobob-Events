@@ -63,7 +63,7 @@ vV.setTransform(textLength, 0, 0, textLength, aQZ.fB + 0.07 * aQZ.i, aQZ.fD - 45
 		}
 		var img = window.__TTWC.bannerImg;
 		if (img.complete && img.naturalWidth) {
-			var boxW = .46 * h.iE,
+			var boxW = .38 * h.iE,
 				boxH = .34 * h.iE,
 				cx = .78 * h.i,
 				cy = .50 * h.j + .02 * h.j;
