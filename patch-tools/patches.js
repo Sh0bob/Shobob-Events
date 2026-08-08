@@ -356,21 +356,21 @@ source = replaceOne(
 source = replaceOne(
   source,
   /this\.aDY\s*=\s*"[^"]*"/,
-  `this.aDY = "https://discord.gg/yMf54Q95wH"`,
+  `this.aDY = "https://discord.gg/9XwKadGqwm"`,
   "change side button 1 link"
 );
 
 source = replaceOne(
   source,
   /this\.a20\s*=\s*"[^"]*"/,
-  `this.a20 = "https://discord.gg/TRPzmA8m2S"`,
+  `this.a20 = "https://discord.gg/u5udb2AQgk"`,
   "change side button 2 link"
 );
 
 source = replaceOne(
   source,
   /this\.aDZ\s*=\s*"[^"]*"/,
-  `this.aDZ = "https://discord.gg/WdaB4hhJkG"`,
+  `this.aDZ = "https://discord.gg/u5udb2AQgk"`,
   "change side button 3 link"
 );
 
