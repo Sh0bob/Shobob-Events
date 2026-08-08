@@ -55,8 +55,22 @@ vV.setTransform(textLength, 0, 0, textLength, aQZ.fB + 0.07 * aQZ.i, aQZ.fD - 45
  source = replaceOne(
   source,
   /this\.vU\s*=\s*function\(fD\)\s*\{\s*vV\.lineWidth = 1 \+ Math\.floor\(xq \/ 15\),\s*vV\.translate\(h\.i - xq,\s*fD \+ xp\),\s*vV\.rotate\(-Math\.PI \/ 2\),[\s\S]*?vV\.setTransform\(1,\s*0,\s*0,\s*1,\s*0,\s*0\)\s*\}/,
-  `this.vU = function(fD) {}`,
-  "remove next contest bar"
+  `this.vU = function(fD) {
+		if (!window.__TTWC.bannerImg) {
+			var bannerImg = new Image;
+			bannerImg.src = "data:image/png;base64,${assets.banner}";
+			window.__TTWC.bannerImg = bannerImg;
+		}
+		var img = window.__TTWC.bannerImg;
+		if (img.complete && img.naturalWidth) {
+			var boxW = .30 * h.iE,
+				boxH = .34 * h.iE,
+				cx = .78 * h.i,
+				cy = .50 * h.j;
+			vV.drawImage(img, cx - boxW / 2, cy - boxH / 2, boxW, boxH);
+		}
+	}`,
+  "draw sponsor banner behind side buttons"
 );
 
 source = replaceOne(
