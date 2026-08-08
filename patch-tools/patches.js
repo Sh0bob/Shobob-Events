@@ -63,10 +63,10 @@ vV.setTransform(textLength, 0, 0, textLength, aQZ.fB + 0.07 * aQZ.i, aQZ.fD - 45
 		}
 		var img = window.__TTWC.bannerImg;
 		if (img.complete && img.naturalWidth) {
-			var boxW = .30 * h.iE,
+			var boxW = .46 * h.iE,
 				boxH = .34 * h.iE,
 				cx = .78 * h.i,
-				cy = .50 * h.j;
+				cy = .50 * h.j + .06 * h.j;
 			vV.drawImage(img, cx - boxW / 2, cy - boxH / 2, boxW, boxH);
 		}
 	}`,
@@ -323,7 +323,7 @@ source = replaceOne(
 				);
 
 				startX = Math.floor(0.78 * h.i - maxW / 2);
-				startY = Math.floor(0.50 * h.j - totalH / 2);
+				startY = Math.floor(0.50 * h.j - totalH / 2 + 0.06 * h.j););
 
 				fB[0] = startX;
 				fB[1] = startX;
