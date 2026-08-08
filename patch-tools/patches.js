@@ -323,7 +323,7 @@ source = replaceOne(
 				);
 
 				startX = Math.floor(0.78 * h.i - maxW / 2);
-				startY = Math.floor(0.50 * h.j - totalH / 2 + 0.06 * h.j););
+				startY = Math.floor(0.50 * h.j - totalH / 2 + 0.06 * h.j);
 
 				fB[0] = startX;
 				fB[1] = startX;
