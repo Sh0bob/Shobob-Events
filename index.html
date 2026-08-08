@@ -1120,7 +1120,7 @@ div[style*="white-space: nowrap"] > button:active,
     const inputRect = kingdomInput.getBoundingClientRect();
 
     const lobbyBtn = findNearbyButton(inputRect, "join/create custom lobby");
-    const settingsBtn = findNearbyButton(inputRect, "SE client settings");
+    const settingsBtn = findNearbyButton(inputRect, "TTWC client settings");
     const menuBtn = findNearbyButton(inputRect, "game menu");
     const colorBtn = findNearbyColorButton(inputRect, [lobbyBtn, settingsBtn, menuBtn]);
     const panelBtn = findPanelButton(inputRect, [lobbyBtn, settingsBtn, menuBtn, colorBtn]);
@@ -1143,7 +1143,7 @@ div[style*="white-space: nowrap"] > button:active,
     if (settingsBtn) {
       setButtonCopy(
         settingsBtn,
-        "TTWC CLIENT SETTINGS",
+        "SE CLIENT SETTINGS",
         "Adjust visuals, effects, and performance",
         "ttwc-settings"
       );
