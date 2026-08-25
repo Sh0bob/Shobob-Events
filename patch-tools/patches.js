@@ -370,7 +370,7 @@ source = replaceOne(
 source = replaceOne(
   source,
   /this\.aDZ\s*=\s*"[^"]*"/,
-  `this.aDZ = "https://discord.gg/u5udb2AQgk"`,
+  `this.aDZ = "https://discord.gg/vttfDmM8st"`,
   "change side button 3 link"
 );
 
