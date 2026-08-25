@@ -20,7 +20,7 @@ module.exports = {
 
   sideButton1: pngToBase64("assets/ttbutton.png"),
   sideButton2: pngToBase64("assets/sebutton.png"),
-  sideButton3: pngToBase64("assets/ad.png"),
+  sideButton3: pngToBase64("assets/shobobbutton.png"),
 
   partners: pngToBase64("assets/partners2.png"),
 };
